@@ -6,11 +6,54 @@
 	margin-top: 30px;
 	background: #fff;
 	border-radius: 10px;
+	height: 100%;
+	// /* From https://css.glass */
+	// background: rgba(255, 255, 255, 0.44);
+	// border-radius: 16px;
+	// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	// backdrop-filter: blur(16.9px);
+	// -webkit-backdrop-filter: blur(16.9px);
+	// border: 1px solid rgba(255, 255, 255, 1);
 
+	border-radius: 10px;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 29px 29px 59px #b8b8b8, -29px -29px 59px #ffffff;
 	.nft-image {
 		width: 100%;
 		img {
 			width: 100%;
+		}
+	}
+	.nft-body {
+		.nft-title {
+			font-size: 0.8rem;
+			font-family: "Poppins", sans-serif;
+			font-weight: 600;
+			color: #000;
+		}
+
+		.etherscan-btn {
+			margin-top: 5px;
+			margin-left: 10px;
+			font-size: 0.9rem;
+			font-family: "Poppins", sans-serif;
+			font-weight: 500;
+			color: rgb(14, 74, 187);
+			cursor: pointer;
+			a {
+				text-decoration: none;
+				color: #fff;
+				padding: 5px 10px;
+
+				// /* From https://css.glass */
+				// background: rgba(113, 109, 228, 0.44);
+				// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+				// backdrop-filter: blur(16.9px);
+				// border: 1px solid rgba(113, 109, 228, 1);
+				border-radius: 6px;
+				background: #d2b0e8;
+				box-shadow: 6px 6px 12px #ac90be, -6px -6px 12px #f8d0ff;
+			}
 		}
 	}
 }
@@ -22,10 +65,54 @@
 		margin-top: 30px;
 		background: #fff;
 		border-radius: 10px;
+		height: 100%;
+		// /* From https://css.glass */
+		// background: rgba(255, 255, 255, 0.44);
+		// border-radius: 16px;
+		// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		// backdrop-filter: blur(16.9px);
+		// -webkit-backdrop-filter: blur(16.9px);
+		// border: 1px solid rgba(255, 255, 255, 1);
+
+		border-radius: 10px;
+		background: linear-gradient(145deg, #cacaca, #f0f0f0);
+		box-shadow: 29px 29px 59px #b8b8b8, -29px -29px 59px #ffffff;
 		.nft-image {
 			width: 100%;
 			img {
 				width: 100%;
+			}
+		}
+		.nft-body {
+			.nft-title {
+				font-size: 1rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+				color: #000;
+			}
+
+			.etherscan-btn {
+				margin-top: 5px;
+				margin-left: 10px;
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: rgb(14, 74, 187);
+				cursor: pointer;
+				a {
+					text-decoration: none;
+					color: #fff;
+					padding: 5px 10px;
+
+					// /* From https://css.glass */
+					// background: rgba(113, 109, 228, 0.44);
+					// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+					// backdrop-filter: blur(16.9px);
+					// border: 1px solid rgba(113, 109, 228, 1);
+					border-radius: 6px;
+					background: #d2b0e8;
+					box-shadow: 6px 6px 12px #ac90be, -6px -6px 12px #f8d0ff;
+				}
 			}
 		}
 	}
@@ -34,15 +121,59 @@
 // small screen
 @media (max-width: 576px) {
 	.nft-card {
-		width: 85%;
+		width: 80%;
 		margin: auto;
 		margin-top: 30px;
 		background: #fff;
 		border-radius: 10px;
+		height: 100%;
+		// /* From https://css.glass */
+		// background: rgba(255, 255, 255, 0.44);
+		// border-radius: 16px;
+		// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		// backdrop-filter: blur(16.9px);
+		// -webkit-backdrop-filter: blur(16.9px);
+		// border: 1px solid rgba(255, 255, 255, 1);
+
+		border-radius: 10px;
+		background: linear-gradient(145deg, #cacaca, #f0f0f0);
+		box-shadow: 29px 29px 59px #b8b8b8, -29px -29px 59px #ffffff;
 		.nft-image {
 			width: 100%;
 			img {
 				width: 100%;
+			}
+		}
+		.nft-body {
+			.nft-title {
+				font-size: 1rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+				color: #000;
+			}
+
+			.etherscan-btn {
+				margin-top: 5px;
+				margin-left: 10px;
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: rgb(14, 74, 187);
+				cursor: pointer;
+				a {
+					text-decoration: none;
+					color: #fff;
+					padding: 5px 10px;
+
+					// /* From https://css.glass */
+					// background: rgba(113, 109, 228, 0.44);
+					// box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+					// backdrop-filter: blur(16.9px);
+					// border: 1px solid rgba(113, 109, 228, 1);
+					border-radius: 6px;
+					background: #d2b0e8;
+					box-shadow: 6px 6px 12px #ac90be, -6px -6px 12px #f8d0ff;
+				}
 			}
 		}
 	}
