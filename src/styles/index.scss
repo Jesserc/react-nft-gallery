@@ -1,0 +1,184 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	background-color: #272525;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.search-section {
+		margin-bottom: 20px;
+		width: 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(93, 122, 216);
+		padding: 20px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		.input {
+			width: 80%;
+			height: 30px;
+			margin-bottom: 10px;
+			background: #fff;
+			border: none;
+			border-radius: 2px;
+			padding: 0 10px;
+			&:focus {
+				outline: 2px solid rgb(240, 178, 235);
+			}
+		}
+		.check-box-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+
+			.check-box {
+				width: 30px;
+				height: 12px;
+				border: none;
+				border-radius: 59%;
+				cursor: pointer;
+			}
+			label {
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: #fff;
+			}
+			button {
+				height: 30px;
+				background: #fff;
+				border: none;
+				border-radius: 2px;
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: rgb(58, 93, 156);
+				cursor: pointer;
+				padding: 0 10px;
+				margin-top: 10px;
+			}
+		}
+	}
+	.nft-container {
+		width: 70%;
+		display: grid;
+		grid-template-columns: repeat(3, 3fr);
+		gap: 5px;
+		grid-auto-rows: minmax(150px, auto);
+	}
+}
+
+// media query
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+		border: 3px solid green;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.search-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+
+			.check-box {
+				width: 30px;
+				height: 12px;
+				border: none;
+				border-radius: 59%;
+				cursor: pointer;
+			}
+			label {
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: #fff;
+			}
+			button {
+				height: 30px;
+				background: #fff;
+				border: none;
+				border-radius: 2px;
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: rgb(58, 93, 156);
+				cursor: pointer;
+				padding: 0 10px;
+				margin-top: 10px;
+			}
+		}
+		.nft-container {
+			width: 70%;
+			display: grid;
+			grid-template-columns: repeat(2, 2fr);
+			gap: 5px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+	}
+}
+
+// small media query
+@media (max-width: 480px) {
+	.container {
+		border: 3px solid green;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.search-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+			width: 85%;
+			.check-box {
+				width: 30px;
+				height: 12px;
+				border: none;
+				border-radius: 59%;
+				cursor: pointer;
+			}
+			label {
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: #fff;
+			}
+			button {
+				height: 30px;
+				background: #fff;
+				border: none;
+				border-radius: 2px;
+				font-size: 0.9rem;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				color: rgb(58, 93, 156);
+				cursor: pointer;
+				padding: 0 10px;
+				margin-top: 10px;
+			}
+		}
+	}
+}
