@@ -53,6 +53,9 @@ const Home = () => {
 
 	return (
 		<div className="container">
+			<div className="title-section">
+				<h3>Ethereum NFT Gallery</h3>
+			</div>
 			<div className="search-section">
 				<input
 					className="input"
