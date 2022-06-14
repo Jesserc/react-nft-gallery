@@ -1,11 +1,14 @@
 import {useState} from "react";
 import {NFTCard} from "./components/NFTCard";
 import "../styles/index.scss";
+import LoadingGif from "../images/Loading.gif";
+
 const Home = () => {
 	const [wallet, setWalletAddress] = useState("");
 	const [collection, setCollectionAddress] = useState("");
 	const [NFTs, setNFTs] = useState([]);
 	const [fetchForCollection, setFetchForCollection] = useState(false);
+	const [isFetching, setIsfetching] = useState(false);
 
 	const fetchNFTs = async () => {
 		let nfts;
@@ -19,15 +22,17 @@ const Home = () => {
 			};
 
 			const fetchURL = `${baseURL}?owner=${wallet}`;
-
+			setIsfetching(true);
 			nfts = await fetch(fetchURL, requestOptions).then(data => data.json());
 		} else {
+			setIsfetching(true);
 			console.log("fetching nfts for collection owned by address");
 			const fetchURL = `${baseURL}?owner=${wallet}&contractAddresses%5B%5D=${collection}`;
 			nfts = await fetch(fetchURL, requestOptions).then(data => data.json());
 		}
 
 		if (nfts) {
+			setIsfetching(false);
 			console.log("nfts:", nfts);
 			setNFTs(nfts.ownedNfts);
 		}
@@ -38,14 +43,17 @@ const Home = () => {
 			var requestOptions = {
 				method: "GET",
 			};
+			setIsfetching(true);
 			const api_key = "d1GAutHvkWYkWqcW5T6sNrogHYQrhrua";
 			const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`;
 			const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`;
+
 			const nfts = await fetch(fetchURL, requestOptions).then(data =>
 				data.json()
 			);
 			if (nfts) {
 				console.log("NFTs in collection:", nfts);
+				setIsfetching(false);
 				setNFTs(nfts.nfts);
 			}
 		}
@@ -94,10 +102,15 @@ const Home = () => {
 							} else fetchNFTs();
 						}}
 					>
-						Let's go!{" "}
+						Fetch
 					</button>
 				</div>
 			</div>
+
+			{isFetching ? (
+				<img src={LoadingGif} alt="" style={{width: "100px"}} />
+			) : null}
+
 			<div className="nft-container">
 				{NFTs.length &&
 					NFTs.map(nft => {
