@@ -38,9 +38,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		padding: 20px;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-		border-radius: 2px;
-
 		background: rgba(255, 255, 255, 0.22);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -105,7 +102,7 @@ body {
 
 // media query
 //laptop - non retina screens
-@media screen and (min-device-width: 1300px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -190,6 +187,92 @@ body {
 	}
 }
 
+//mini laptop
+@media screen and (min-device-width: 1020px) and (max-device-width: 1300px) and (-webkit-min-device-pixel-ratio: 1) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.title-section {
+			color: white;
+			padding: 3px 8px;
+			margin: 10px;
+		}
+		.search-section {
+			margin-bottom: 20px;
+			width: 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			border-radius: 2px;
+
+			background: rgba(255, 255, 255, 0.22);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			.input {
+				width: 80%;
+				height: 30px;
+				margin-bottom: 10px;
+				background: #fff;
+				border: none;
+				border-radius: 2px;
+				padding: 0 10px;
+				&:focus {
+					outline: 2px solid rgb(240, 178, 235);
+				}
+			}
+			.check-box-section {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 10px;
+
+				.check-box {
+					width: 30px;
+					height: 12px;
+					border: none;
+					border-radius: 59%;
+					cursor: pointer;
+				}
+				label {
+					font-size: 0.9rem;
+					font-family: "Poppins", sans-serif;
+					font-weight: 500;
+					color: #fff;
+				}
+				button {
+					height: 30px;
+					background: #fff;
+					border: none;
+					border-radius: 2px;
+					font-size: 0.9rem;
+					font-family: "Poppins", sans-serif;
+					font-weight: 500;
+					color: rgb(58, 93, 156);
+					cursor: pointer;
+					padding: 0 10px;
+					margin-top: 10px;
+				}
+			}
+		}
+		.nft-container {
+			width: 65%;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+	}
+}
+
 // ipad
 @media only screen and (min-device-width: 765px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
 	.container {
@@ -212,14 +295,12 @@ body {
 			padding: 20px;
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 			border-radius: 2px;
-
-			// background: rgba(113, 109, 228, 0.44);
-			background-color: #6d3491;
+			background: rgba(255, 255, 255, 0.22);
 			border-radius: 16px;
 			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-			backdrop-filter: blur(16.9px);
-			-webkit-backdrop-filter: blur(16.9px);
-			border: 1px solid rgba(113, 109, 228, 1);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+			border: 1px solid rgba(255, 255, 255, 0.3);
 			.input {
 				width: 80%;
 				height: 30px;
@@ -299,12 +380,12 @@ body {
 			justify-content: center;
 			align-items: center;
 			padding: 20px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-			background-color: #6d3491;
+			background: rgba(255, 255, 255, 0.22);
+			border-radius: 16px;
 			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-			backdrop-filter: blur(16.9px);
-			-webkit-backdrop-filter: blur(16.9px);
-			border: 1px solid rgba(113, 109, 228, 1);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+			border: 1px solid rgba(255, 255, 255, 0.3);
 			.input {
 				width: 80%;
 				height: 30px;
