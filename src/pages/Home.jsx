@@ -108,7 +108,13 @@ const Home = () => {
 			</div>
 
 			{isFetching ? (
-				<img src={LoadingGif} alt="" style={{width: "100px"}} />
+				<h4
+					style={{
+						color: "white",
+					}}
+				>
+					fetching.....
+				</h4>
 			) : null}
 
 			<div className="nft-container">
